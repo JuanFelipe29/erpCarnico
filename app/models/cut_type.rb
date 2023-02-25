@@ -1,0 +1,2 @@
+class CutType < ApplicationRecord
+end
