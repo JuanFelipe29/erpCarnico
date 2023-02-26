@@ -2,6 +2,7 @@ class ApiController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   include Authorization
+  include Serializable
 
   rescue_from ActiveRecord::RecordInvalid do |error|
     render json: { errors: error.record.errors.messages }, status: :unprocessable_entity
