@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :supplier do
-    name { "MyString" }
-    nit { "MyString" }
-    email { "MyString" }
-    phone { "MyString" }
+    name { Faker::Company.name }
+    nit { Faker::Company.duns_number }
+    email { Faker::Internet.email }
+    phone { Faker::PhoneNumber.cell_phone_in_e164 }
   end
 end
